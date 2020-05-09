@@ -19,4 +19,4 @@ def fibonacciLin(x):
   return str(Fib)
 
 strFib = fibonacciLin(50)
-print(int(strFib[0]) - int(strFib[-1]))
+print(int(strFib[-1]) - int(strFib[0]))
