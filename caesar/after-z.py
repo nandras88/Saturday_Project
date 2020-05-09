@@ -1,0 +1,1 @@
+# Keressük ki a file-ban a Z karakter után következő számjegy karatereket és az átlaguknak # # vegyük az egész részét.
