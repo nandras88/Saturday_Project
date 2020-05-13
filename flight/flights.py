@@ -27,7 +27,7 @@ def Zero( value ):
     else:
         return value
 
-file = open('flight_new.csv', 'r')
+file = open('flights_new.csv', 'r')
 
 line = file.readline()
 line = file.readline().strip()
@@ -65,22 +65,22 @@ for item in items:
         carrierDatas[index].avgLate = carrierDatas[index].delayedMinutes / carrierDatas[index].flights
         carrierDatas[index].visited.add(item.aCode)
 
-
+print(len(items))
 file = open('carriers.txt','w')
-print('{0:4s} {1:*^30s}{2:>8}{3:>8}{4:>8} {5} {6:8} {7}'.format(
+print('{0:4s} {1:*^30s}{2:>8}{3:>8}{4:>10} {5} {6:8} {7}'.format(
     'Code','Name of the Airline','Flights','Delayed','Minutes','Delayed %','Avg Minutes','Visited Airports'
 ))
-file.write('{0:4s} {1:*^30s}{2:>8}{3:>8}{4:>8} {5} {6:8} {7}'.format(
+file.write('{0:4s} {1:*^30s}{2:>8}{3:>8}{4:>10} {5} {6:8} {7}'.format(
     'Code','Name of the Airline','Flights','Delayed','Minutes','Delayed %','Avg Minutes','Visited Airports'
 )+'\n')
 
 for carrier in carrierDatas:
-    print('{0:>4s} {1:>30s}{2:8}{3:8}{4:8} {5:8.2f}% {6:>11.2f} {7:>16}'.format(
+    print('{0:>4s} {1:>30s}{2:8}{3:8}{4:10} {5:8.2f}% {6:>11.2f} {7:>16}'.format(
         carrier.cCode, carrier.cName, carrier.flights, carrier.delayed,
         carrier.delayedMinutes, carrier.delayedPercent,
         carrier.avgLate, len(carrier.visited)
     ))
-    file.write('{0:>4s} {1:>30s}{2:8}{3:8}{4:8} {5:8.2f}% {6:>11.2f} {7:>16}'.format(
+    file.write('{0:>4s} {1:>30s}{2:8}{3:8}{4:10} {5:8.2f}% {6:>11.2f} {7:>16}'.format(
         carrier.cCode, carrier.cName, carrier.flights, carrier.delayed,
         carrier.delayedMinutes, carrier.delayedPercent,
         carrier.avgLate, len(carrier.visited)

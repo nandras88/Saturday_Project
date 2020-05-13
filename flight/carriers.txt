@@ -1,19 +1,19 @@
-Code *****Name of the Airline****** Flights Delayed Minutes Delayed % Avg Minutes Visited Airports
-  9E              Endeavor Air Inc.  172724   29559 2378231    17.11%       13.77              126
-  AA         American Airlines Inc.  592464  124656 8365903    21.04%       14.12              117
-  AS           Alaska Airlines Inc.  150963   29701 1569132    19.67%       10.39               77
-  B6                JetBlue Airways  172871   43183 3406001    24.98%       19.70               70
-  DL           Delta Air Lines Inc.  568014   82126 5528801    14.46%        9.73              153
-  EV       ExpressJet Airlines Inc.   24389    5660  452566    23.21%       18.56              111
-  F9         Frontier Airlines Inc.   76178   18209 1263327    23.90%       16.58              106
-  G4                  Allegiant Air   64081   13401  916484    20.91%       14.30              126
-  HA         Hawaiian Airlines Inc.   48519    5563  220415    11.47%        4.54               19
-  MQ                      Envoy Air  186779   39182 2602342    20.98%       13.93              168
-  NK               Spirit Air Lines  118287   22049 1528641    18.64%       12.92               52
-  OH              PSA Airlines Inc.  167434   34261 2332551    20.46%       13.93              103
-  OO          SkyWest Airlines Inc.  413715   75696 6485635    18.30%       15.68              271
-  UA          United Air Lines Inc.  303717   59978 4438654    19.75%       14.61              115
-  WN         Southwest Airlines Co.  676375  117913 6130882    17.43%        9.06               90
-  YV             Mesa Airlines Inc.  109799   22349 1802568    20.35%       16.42              127
-  YX               Republic Airline  164258   28903 1918518    17.60%       11.68              114
-  EV        ExpressJet Airlines LLC   52143   12540 1129347    24.05%       21.66              119
+Code *****Name of the Airline****** Flights Delayed   Minutes Delayed % Avg Minutes Visited Airports
+  9E              Endeavor Air Inc.  281625   46160   3666277    16.39%       13.02              127
+  AA         American Airlines Inc. 1018437  204051  13827596    20.04%       13.58              117
+  AS           Alaska Airlines Inc.  284697   52108   2679057    18.30%        9.41               77
+  B6                JetBlue Airways  321204   75205   5965295    23.41%       18.57               70
+  DL           Delta Air Lines Inc. 1073663  151955  10286409    14.15%        9.58              154
+  EV       ExpressJet Airlines Inc.   24389    5660    452566    23.21%       18.56              111
+  F9         Frontier Airlines Inc.  149912   35458   2413780    23.65%       16.10              106
+  G4                  Allegiant Air  115030   23440   1656098    20.38%       14.40              126
+  HA         Hawaiian Airlines Inc.   90637    9984    400644    11.02%        4.42               19
+  MQ                      Envoy Air  351701   69128   4497617    19.66%       12.79              169
+  NK               Spirit Air Lines  224464   40847   2826462    18.20%       12.59               52
+  OH              PSA Airlines Inc.  313346   63649   4474685    20.31%       14.28              104
+  OO          SkyWest Airlines Inc.  909735  160179  13488216    17.61%       14.83              277
+  UA          United Air Lines Inc.  673640  135698  10126607    20.14%       15.03              122
+  WN         Southwest Airlines Co. 1463985  236932  12294432    16.18%        8.40               90
+  YV             Mesa Airlines Inc.  244057   49177   4000651    20.15%       16.39              130
+  YX               Republic Airline  360077   63673   4394835    17.68%       12.21              120
+  EV        ExpressJet Airlines LLC  119067   27628   2378008    23.20%       19.97              120
