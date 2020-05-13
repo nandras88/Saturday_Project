@@ -18,8 +18,10 @@ class Carrier:
         self.flights = flights
         self.delayed = delayed
         self.delayedMinutes = delayMinutes
-        self.visited = set()
-        self.visited.add(aCode)
+        #self.visited = set()
+        self.visited = dict()
+        #self.visited.add(aCode)
+        self.visited[aCode] = 1
 
 def Zero( value ):
     if value == '':
@@ -63,26 +65,34 @@ for item in items:
         carrierDatas[index].delayedMinutes += item.delayMinutes
         carrierDatas[index].delayedPercent = carrierDatas[index].delayed / carrierDatas[index].flights * 100
         carrierDatas[index].avgLate = carrierDatas[index].delayedMinutes / carrierDatas[index].flights
-        carrierDatas[index].visited.add(item.aCode)
+        #carrierDatas[index].visited.add(item.aCode)
+        if item.aCode in carrierDatas[index].visited:
+            carrierDatas[index].visited[item.aCode] = carrierDatas[index].visited[item.aCode] + 1
+        else:
+            carrierDatas[index].visited[item.aCode] = 1
 
 print(len(items))
 file = open('carriers.txt','w')
-print('{0:4s} {1:*^30s}{2:>8}{3:>8}{4:>10} {5} {6:8} {7}'.format(
-    'Code','Name of the Airline','Flights','Delayed','Minutes','Delayed %','Avg Minutes','Visited Airports'
+print('{0:4s} {1:*^30s}{2:>8}{3:>8}{4:>10} {5} {6:8} {7:16} {8:12} {9}'.format(
+    'Code', 'Name of the Airline', 'Flights', 'Delayed', 'Minutes', 'Delayed %', 'Avg Minutes', 'Visited Airports',
+    'Top Airport', 'How many'
 ))
-file.write('{0:4s} {1:*^30s}{2:>8}{3:>8}{4:>10} {5} {6:8} {7}'.format(
-    'Code','Name of the Airline','Flights','Delayed','Minutes','Delayed %','Avg Minutes','Visited Airports'
+file.write('{0:4s} {1:*^30s}{2:>8}{3:>8}{4:>10} {5} {6:8} {7:16} {8:12} {9}'.format(
+    'Code', 'Name of the Airline', 'Flights', 'Delayed', 'Minutes', 'Delayed %', 'Avg Minutes', 'Visited Airports',
+    'Top Airport', 'How many'
 )+'\n')
 
 for carrier in carrierDatas:
-    print('{0:>4s} {1:>30s}{2:8}{3:8}{4:10} {5:8.2f}% {6:>11.2f} {7:>16}'.format(
+    max_value = max(carrier.visited.values())
+    max_keys = [k for k, v in carrier.visited.items() if v == max_value]
+    print('{0:>4s} {1:>30s}{2:8}{3:8}{4:10} {5:8.2f}% {6:>11.2f} {7:>16} {8:>11} {9:>9}'.format(
         carrier.cCode, carrier.cName, carrier.flights, carrier.delayed,
         carrier.delayedMinutes, carrier.delayedPercent,
-        carrier.avgLate, len(carrier.visited)
+        carrier.avgLate, len(carrier.visited), max_keys[0], max_value
     ))
-    file.write('{0:>4s} {1:>30s}{2:8}{3:8}{4:10} {5:8.2f}% {6:>11.2f} {7:>16}'.format(
+    file.write('{0:>4s} {1:>30s}{2:8}{3:8}{4:10} {5:8.2f}% {6:>11.2f} {7:>16} {8:>11} {9:>9}'.format(
         carrier.cCode, carrier.cName, carrier.flights, carrier.delayed,
         carrier.delayedMinutes, carrier.delayedPercent,
-        carrier.avgLate, len(carrier.visited)
+        carrier.avgLate, len(carrier.visited), max_keys[0], max_value
     )+'\n')
 file.close()
