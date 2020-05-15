@@ -129,3 +129,11 @@ for a in airportDatas:
     print('{0:4} {1:<70} {2:>7}'.format(a.aCode, a.aName, a.flights))
 
 file.close()
+
+file = open('bestTraffic.txt','w')
+file.write('{0:4} {1:*^70} {2:>7}'.format('Code', 'Airport', 'Flights') + '\n')
+for i in range(0, 3):
+    file.write('{0:4} {1:<70} {2:>7}'.format(airportDatas[i].aCode,
+                                             airportDatas[i].aName,
+                                             airportDatas[i].flights) + '\n')
+file.close()
