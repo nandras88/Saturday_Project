@@ -23,6 +23,13 @@ class Carrier:
         #self.visited.add(aCode)
         self.visited[aCode] = 1
 
+class Airport:
+    def __init__(self, aCode, aName, flights):
+        self.aCode = aCode
+        self.aName = aName
+        self.flights = flights
+
+
 def Zero( value ):
     if value == '':
         return '0.0'
@@ -71,8 +78,20 @@ for item in items:
         else:
             carrierDatas[index].visited[item.aCode] = 1
 
+airports = []
+airportDatas = []
+
+for item in items:
+    try:
+        index = airports.index(item.aName)
+    except Exception:
+        airports.append(item.aName)
+        airportDatas.append(Airport(item.aCode, item.aName, item.flights))
+    else:
+        airportDatas[index].flights += item.flights
+
 print(len(items))
-file = open('carriers.txt','w')
+file = open('carriers.txt', 'w')
 print('{0:4s} {1:*^30s}{2:>8}{3:>8}{4:>10} {5} {6:8} {7:16} {8:12} {9}'.format(
     'Code', 'Name of the Airline', 'Flights', 'Delayed', 'Minutes', 'Delayed %', 'Avg Minutes', 'Visited Airports',
     'Top Airport', 'How many'
@@ -95,4 +114,18 @@ for carrier in carrierDatas:
         carrier.delayedMinutes, carrier.delayedPercent,
         carrier.avgLate, len(carrier.visited), max_keys[0], max_value
     )+'\n')
+file.close()
+
+print('{0:-^84}'.format('Airports'))
+
+file = open('airports.txt', 'w')
+
+airportDatas.sort(key=lambda x: x.flights, reverse=True)
+file.write('{0:4} {1:*^70} {2:>7}'.format('Code', 'Airport', 'Flights') + '\n')
+print('{0:4} {1:*^70} {2:>7}'.format('Code', 'Airport', 'Flights'))
+
+for a in airportDatas:
+    file.write('{0:4} {1:<70} {2:>7}'.format(a.aCode, a.aName, a.flights) + '\n')
+    print('{0:4} {1:<70} {2:>7}'.format(a.aCode, a.aName, a.flights))
+
 file.close()
