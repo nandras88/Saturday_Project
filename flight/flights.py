@@ -116,6 +116,15 @@ for carrier in carrierDatas:
     )+'\n')
 file.close()
 
+file = open('bestAvgLate.txt', 'w')
+carrierDatas.sort(key=lambda x: x.avgLate, reverse=False)
+file.write('{0:4s} {1:*^30s} {2:11}'.format('Code', 'Name of the Airline', 'Avg Minutes', )
+           + '\n')
+for i in range(0, 3):
+    file.write('{0:4s} {1:30} {2:11.2f}'.format(carrierDatas[i].cCode, carrierDatas[i].cName,
+                                         carrierDatas[i].avgLate) + '\n')
+file.close()
+
 print('{0:-^84}'.format('Airports'))
 
 file = open('airports.txt', 'w')
