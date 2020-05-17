@@ -74,9 +74,9 @@ for item in items:
         carrierDatas[index].avgLate = carrierDatas[index].delayedMinutes / carrierDatas[index].flights
         #carrierDatas[index].visited.add(item.aCode)
         if item.aCode in carrierDatas[index].visited:
-            carrierDatas[index].visited[item.aCode] = carrierDatas[index].visited[item.aCode] + 1
+            carrierDatas[index].visited[item.aCode] = carrierDatas[index].visited[item.aCode] + item.flights
         else:
-            carrierDatas[index].visited[item.aCode] = 1
+            carrierDatas[index].visited[item.aCode] = item.flights
 
 airports = []
 airportDatas = []
