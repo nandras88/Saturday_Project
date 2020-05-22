@@ -24,3 +24,16 @@ menu a {
     color: #3cb878;
 }
 
+#airlinesList ul {
+    margin-left: 40px;
+}
+
+#airlinesList li {
+    margin-bottom: 5px;
+}
+
+#airlinesList a {
+    color: #3cb878;
+    font-size: 20px;
+}
+
