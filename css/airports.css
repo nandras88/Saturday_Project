@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    text-align: center;
+    background-color: #ccc;
+    margin: 0;
+    padding: 20px 0;
+}
+
+
+main {
+    width: 800px;
+    margin: 0 auto;
+}
+
+menu {
+    padding-left: 0px;
+}
+
+menu p {
+    display: inline;
+}
+
+menu a {
+    color: #3cb878;
+}
