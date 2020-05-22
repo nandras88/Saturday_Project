@@ -16,6 +16,10 @@ main {
     margin: 0 auto;
 }
 
+menu {
+    padding-left: 0px;
+}
+
 menu p {
     display: inline;
 }
@@ -24,5 +28,28 @@ menu a {
     color: #3cb878;
 }
 
+#datas {
+    display: flex;
+    flex-direction: row;
+}
 
+#imageHolder img {
+    border: 1px solid #333;
+}
+
+#airlineDatas {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+#airlineDatas p:nth-child(odd) {
+    font-weight: bold;
+    margin-bottom: 3px;
+    margin-top: 0px;
+}
+
+#airlineDatas p:nth-child(even) {
+    margin-top: 0px;
+}
 

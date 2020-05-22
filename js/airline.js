@@ -1,4 +1,12 @@
 $(document).ready(function(){
+    $airlineNameMenu = $('#airlineNameMenu');
+    $airlineName = $("#airlineName h2");
+    $flights = $("#flights");
+    $airNum = $("#airNum");
+    $delAvg = $("#delAvg");
+    $minAvg = $("#minAvg");
+    $topPort = $("#topPort");
+    $logo = $("#imageHolder img");
 
     function getUrlVars() {
         var vars = {};
@@ -18,31 +26,24 @@ $(document).ready(function(){
     
     
     var code = getUrlParam('code','Empty');
-    
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        var myArr = JSON.parse(this.responseText);
-        listDatas = "";
-        for( var i = 0; i < myArr.length; i++ ){
-            if( myArr[i].code == code )
-            {
-                console.log(myArr[i].code);
-                console.log(myArr[i].name);
-                console.log(myArr[i].flights);
-                console.log(myArr[i].airNum);
-                console.log(myArr[i].delAvg);
-                console.log(myArr[i].minAvg);
-                console.log(myArr[i].topPort);
+    var name = getUrlParam('name','Empty').replace(/%20/gi,' ');
+    var flights = getUrlParam('flights','Empty');
+    var airNum = getUrlParam('airNum','Empty');
+    var delAvg = getUrlParam('delAvg','Empty');
+    var minAvg = getUrlParam('minAvg','Empty');
+    var topPort = getUrlParam('topPort','Empty');
 
-            }
-            // listDatas += "<a href=\"airline.html?code=" + myArr[i].code  + "\"><li>" + myArr[i].name + "</li></a>";
-        };
-        //$listItems.html(listDatas);
-      }
-    };
-    xmlhttp.open("GET", "https://api.jsonbin.io/b/5ec7d44718c8475bf16e4782", true);
-    xmlhttp.send();
+
+    $airlineNameMenu.text(name);
+    $airlineName.text(name);
+    $flights.text(flights);
+    $airNum.text(airNum);
+    $delAvg.text(delAvg+"%");
+    $minAvg.text(minAvg);
+    $topPort.text(topPort);
+    $logo.attr("src","logo/"+code+".png");
+
+
 
 });
 
