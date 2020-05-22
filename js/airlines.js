@@ -7,11 +7,11 @@ $(document).ready(function(){
         var myArr = JSON.parse(this.responseText);
         listDatas = "";
         for( var i = 0; i < myArr.length; i++ ){
-            listDatas += "<a href=\""+ myArr[i].url +"\"><li>" + myArr[i].name + "</li></a>";
+            listDatas += "<a href=\"airline.html?code=" + myArr[i].code  + "\"><li>" + myArr[i].name + "</li></a>";
         };
         $listItems.html(listDatas);
       }
     };
-    xmlhttp.open("GET", "https://api.jsonbin.io/b/5ec7a5c8bbaf1f258944d748/1", true);
+    xmlhttp.open("GET", "https://api.jsonbin.io/b/5ec7d44718c8475bf16e4782", true);
     xmlhttp.send();
 });

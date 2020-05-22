@@ -146,3 +146,21 @@ for i in range(0, 3):
                                              airportDatas[i].aName,
                                              airportDatas[i].flights) + '\n')
 file.close()
+
+file = open('carriers.json','w')
+
+file.write("[\n")
+
+for carrier in carrierDatas:
+    max_value = max(carrier.visited.values())
+    max_keys = [k for k, v in carrier.visited.items() if v == max_value]
+
+
+    file.write('{ ')
+    file.write('"code":"{0}", "name":"{1}", "flights":"{2}", "airNum":"{3}",   "delAvg":"{4:.2f}", "minAvg":"{5:.2f}", "topPort":"{6}"'.format(carrier.cCode,carrier.cName, carrier.flights,len(carrier.visited),carrier.delayedPercent, carrier.avgLate, max_keys[0]))
+    file.write(' }, \n')
+    file.write(line)
+
+file.write("]")
+
+file.close
