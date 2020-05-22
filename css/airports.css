@@ -27,3 +27,61 @@ menu p {
 menu a {
     color: #3cb878;
 }
+
+#holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+#holder div {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #333;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+#item1st img{
+    float: left;
+}
+
+#item2nd img{
+    float: left;
+}
+
+#item3rd img{
+    float: left;
+}
+
+#name1st {
+    display: inline;
+    font-weight: bold;
+}
+
+#name2nd {
+    display: inline;
+    font-weight: bold;
+}
+
+#name3rd {
+    display: inline;
+    font-weight: bold;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+.fontH {
+    font-size: 14px;
+}
+
+.marginB {
+    margin-bottom: 0px;
+}
+
+.marginT {
+    margin-top: 0px;
+}
