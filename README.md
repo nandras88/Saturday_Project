@@ -11,14 +11,14 @@ A képzés keretében olyan eszközökkel ismerkedhettünk meg, amik ma már né
 A projekt alatt 4 fős csapatunk volt, egy mentor támogatásával. 
 
 ### Mentorunk: 
- - Noszka András
+ - [Noszka András](https://www.linkedin.com/in/andras-noszka-187685138/)
 
 ### A csapat tagjai:
 
- - Várhidiné Rita
- - Zilahi Erzsébet
- - Bacsáné Kata
- - Gúth Erik
+ - [Várhidiné Rita](bemutatkozas/oneletrajz-varhidine.html)
+ - [Zilahi Erzsébet](bemutatkozas/oneletrajz-zilahi.html)
+ - [Bacsáné Kata](bemutatkozas/oneletrajz-bacsane.html)
+ - [Gúth Erik](bemutatkozas/oneletrajz-guth.html)
  
 Egy repüléssel kapcsolatos statisztikai web-oldalt kellett létrehoznunk.
 
@@ -46,6 +46,13 @@ Szintén feladat volt a megjelenítendő adatok kinyerése a forrásul kapott Ex
  - Képek gyűjtése internetről
  - Dokumentáció készítése 
  
+### Project készítésénél használt technológiák:
+
+ - HTML , CSS
+ - JAVASCRIPT
+ - PHYTON
+ - TRELLO PROJECT MANAGEMENT: KANBAN
+ 
 ### Az első nap eredményei:
 
  - A rejtjelezés megfejtéséhez a 3 feltörési feladat eredményeképpen előállt az eltolás mértéke: 16
@@ -64,5 +71,11 @@ Szintén feladat volt a megjelenítendő adatok kinyerése a forrásul kapott Ex
 ### A második nap eredményei:
 
  - Megbeszéltük a befejezés mikéntjét
- - ...
+ - Az utolsó aloldal elkészült
+ - Elkészültek az önéletrajzok
+ - Ez a dokumentáció is
+ - S felkerült egy oldalra az egész projekt
+ - Sok ismerettel és tapasztalattal gazdagabbak lettünk!
+ 
+ 
  
