@@ -53,6 +53,8 @@ Szintén feladat volt a megjelenítendő adatok kinyerése a forrásul kapott Ex
  - Kigyűjtöttük a légitársaságokat, és a légitársaságok logóit
  - A repülőgép-, és a serleg-ikonok, illetve a logók méretezése, színezése is megtörtént
  
+ ![eredmeny.png](eredmeny.png)
+ 
 ### A köztes két hét eseményei:
 
  - Apránként minden adatelemzés megtörtént, előálltak a weboldalakhoz szükséges információk
