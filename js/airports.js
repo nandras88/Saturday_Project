@@ -37,6 +37,6 @@ $(document).ready(function(){
         }
     };
 
-    xmlhttp.open("GET", "https://api.jsonbin.io/b/5ec8323ebbaf1f2589452835", true);
+    xmlhttp.open("GET", "https://api.jsonbin.io/b/5ec8323ebbaf1f2589452835/1", true);
     xmlhttp.send();
 });
